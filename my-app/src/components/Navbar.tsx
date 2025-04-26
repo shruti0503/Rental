@@ -31,12 +31,8 @@ const Navbar = () => {
                 </div>
 
             </Link>
-            
-        </div>
-        <p className="text-primary-200 hidden md:block">
-              Discover your perfect rental apartment with our advanced search
-        </p>
-        <div className="flex items-center gap-5">
+
+            <div className="flex items-center gap-5">
         <Link href="/signin">
                 <Button
                   variant="outline"
@@ -54,6 +50,11 @@ const Navbar = () => {
                 </Button>
               </Link>
         </div>
+            
+        </div>
+        {/* <p className="text-primary-200 hidden md:block">
+              Discover your perfect rental apartment with our advanced search
+        </p> */}
        
     </div>
   )

@@ -2,6 +2,9 @@
 import React from 'react'
 import FeaturesSection from './FeaturesSection'
 import HeroSection from './HeroSection'
+import DiscoverSection from './DiscoverSection'
+import CallToActionSection from './CallToActionSection'
+import FooterSection from './FooterSection'
 
 const Landing = () => {
 
@@ -9,6 +12,9 @@ const Landing = () => {
     <div>
         <HeroSection />
         <FeaturesSection />
+        <DiscoverSection />
+        <CallToActionSection />
+        <FooterSection />
     </div>
   )
 }
