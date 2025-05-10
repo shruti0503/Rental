@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Npgsql;
+using Microsoft.EntityFrameworkCore;
 
 var builder=WebApplication.CreateBuilder(args); // creates builder project
 builder.Configuration.AddEnvironmentVariables(); // tells the .net env to read variables like PORT, JwtSecret )
@@ -20,6 +22,36 @@ builder.Services.AddCors(options=>{ // adding cors ,
         .Build() // here allowing all to access to access your server
     );
 });
+
+Console.WriteLine("Connection String: " + builder.Configuration.GetConnectionString("DefaultConnection"));
+
+
+
+builder.Host.ConfigureAppConfiguration((context, config) =>
+{
+    var env = context.HostingEnvironment;
+    config.AddJsonFile("appsettings.json", optional: false)
+          .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+});
+
+
+string connectionString = "Host=localhost;Port=5432;Database=realEstate;Username=postgres;Password=Guddu99;Search Path=public";
+
+try
+{
+    await using (var connection = new NpgsqlConnection(connectionString))
+    {
+        await connection.OpenAsync();
+        Console.WriteLine($"Connected to PostgreSQL server: {connection.PostgreSqlVersion}");
+        builder.Services.AddDbContext<AppDbContext>(options =>
+           options.UseNpgsql(connectionString));
+    }
+}
+catch (NpgsqlException ex)
+{
+    Console.WriteLine($"Error connecting to PostgreSQL: {ex.Message}");
+}
+
 
 // setting up jwt authenctication middleware in app
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

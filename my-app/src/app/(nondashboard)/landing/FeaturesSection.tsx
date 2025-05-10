@@ -31,7 +31,7 @@ const FeaturesSection = () => {
       variants={containerVariants}
       className="py-24 px-6 sm:px-8 lg:px-12 xl:px-16 bg-white"
     >
-      <div className="max-w-4xl xl:max-w-6xl mx-auto">
+      <div className="max-w-4xl xl:max-w-6xl mx-auto text-black">
         <motion.h2
           variants={itemVariants}
           className="text-3xl font-bold text-center mb-12 w-full sm:w-2/3 mx-auto"

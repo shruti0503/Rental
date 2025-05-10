@@ -1,0 +1,50 @@
+# Build Results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider, VSCode, and Visual Studio settings
+.vscode/
+.idea/
+*.vs/
+*.sw?
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# ASP.NET temporary files
+**/App_Data/
+**/App_Code/
+**/App_Browsers/
+**/App_Themes/
+
+# Publish outputs
+publish/
+*.Publish.xml
+
+# NuGet packages
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Database files
+*.mdf
+*.ldf
+*.db
+
+# Others
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+TestResults/

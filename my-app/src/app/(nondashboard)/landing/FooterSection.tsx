@@ -8,15 +8,16 @@ import {
   faLinkedin,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import Logo from "@/components/Logo";
 
 const FooterSection = () => {
   return (
-    <footer className="border-t border-gray-200 py-20">
+    <footer className="border-t border-gray-400 py-20 text-black">
       <div className="max-w-4xl mx-auto px-6 sm:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4">
             <Link href="/" className="text-xl font-bold" scroll={false}>
-              RENTIFUL
+              <Logo />
             </Link>
           </div>
           <nav className="mb-4">
@@ -68,8 +69,8 @@ const FooterSection = () => {
             </a>
           </div>
         </div>
-        <div className="mt-8 text-center text-sm text-gray-500 flex justify-center space-x-4">
-          <span>© RENTiful. All rights reserved.</span>
+        <div className="mt-8 text-center text-sm text-black-500 flex justify-center space-x-4">
+          <span>© Dwello. All rights reserved.</span>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
           <Link href="/cookies">Cookie Policy</Link>

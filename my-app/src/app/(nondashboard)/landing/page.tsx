@@ -5,13 +5,13 @@ import HeroSection from './HeroSection'
 import DiscoverSection from './DiscoverSection'
 import CallToActionSection from './CallToActionSection'
 import FooterSection from './FooterSection'
-
+ 
 const Landing = () => {
 
   return (
     <div>
         <HeroSection />
-        <FeaturesSection />
+        {/* <FeaturesSection /> */}
         <DiscoverSection />
         <CallToActionSection />
         <FooterSection />

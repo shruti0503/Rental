@@ -15,8 +15,8 @@ body,
   height: 100%;
   width: 100%;
   @apply text-sm;
-  @apply bg-white;
-  @apply dark:bg-black;
+  /* @apply bg-white;
+  @apply dark:bg-black; */
 }
 
 @layer base {
@@ -155,14 +155,7 @@ body,
   @apply bg-primary-300;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
+
 
 /* Amplify UI Overrides */
 [data-amplify-authenticator] {
@@ -243,7 +236,3 @@ body,
   color: #ff0000;
 }
 
-/* Sonner Toast Styles */
-[data-close-button="true"] {
-  @apply bg-background border-border text-foreground hover:bg-muted;
-}

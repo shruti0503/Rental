@@ -14,7 +14,7 @@ const CallToActionSection = () => {
         fill
         className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 text-black  bg-opacity-60"></div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
@@ -24,25 +24,25 @@ const CallToActionSection = () => {
       >
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 md:mr-10">
-            <h2 className="text-2xl font-bold text-white">
+            <h2 className="text-3xl font-bold text-black">
               Find Your Dream Rental Property
             </h2>
           </div>
-          <div>
-            <p className="text-white mb-3">
+          <div className="bg-white p-10 rounded-lg bg-opacity-30 z-0">
+            <p className="text-black mb-3 font-semibold text-lg ">
               Discover a wide range of rental properties in your desired
               location.
             </p>
-            <div className="flex justify-center md:justify-start gap-4">
+            <div className="flex justify-center  md:justify-start gap-4">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="inline-block text-primary-700 bg-white rounded-lg px-6 py-3 font-semibold hover:bg-primary-500 hover:text-primary-50"
+                className="inline-block  border-black-200 text-primary-700 bg-white rounded-lg px-6 py-3 font-semibold hover:bg-primary-500 hover:text-primary-50"
               >
                 Search
               </button>
               <Link
                 href="/signup"
-                className="inline-block text-white bg-secondary-500 rounded-lg px-6 py-3 font-semibold hover:bg-secondary-600"
+                className="inline-block text-white bg-black rounded-lg px-6 py-3 font-semibold "
                 scroll={false}
               >
                 Sign Up

@@ -15,28 +15,27 @@ const HeroSection = () => {
  
 
   return (
-    <div className="relative h-screen">
+    <div className="relative bg-[#EADDCA] h-screen">
       <Image
-        src="/landing-splash.jpg"
+        src="/rent.jpg"
         alt="Rentiful Rental Platform Hero Section"
         fill
-       // className="object-cover object-center"
-       // priority
+        className="object-cover object-center"
+        priority
       />
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-opacity-60"></div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="absolute top-1/3 transform -translate-x-1/2 -translate-y-1/2 text-center w-full"
       >
-        <div className="max-w-4xl mx-auto px-16 sm:px-12">
-          <h1 className="text-5xl font-bold text-white mb-4">
-            Start your journey to finding the perfect place to call home
+        <div className="max-w-4xl bg-opacity-40 bg-white p-10 rounded-lg mx-auto px-16 sm:px-12">
+          <h1 className="text-5xl font-bold text-black mb-4">
+            Find Your Dream Home
           </h1>
-          <p className="text-xl text-white mb-8">
-            Explore our wide range of rental properties tailored to fit your
-            lifestyle and needs!
+          <p className="text-xl text-black mb-8">
+              Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision
           </p>
 
           <div className="flex justify-center">
@@ -49,7 +48,7 @@ const HeroSection = () => {
             />
             <Button
               //onClick={handleLocationSearch}
-              className="bg-secondary-500 text-white rounded-none rounded-r-xl border-none hover:bg-secondary-600 h-12"
+              className="bg-black text-white rounded-none rounded-r-xl border-none hover:bg-secondary-600 h-12"
             >
               Search
             </Button>
